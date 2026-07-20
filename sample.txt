@@ -1,0 +1,57 @@
+& "C:\xampp\php\php.exe" -S localhost:8080 -t public
+
+PUBLIC ROUTE
+Method: GET
+URL: http://localhost:8080/
+
+Authorization: Bearer dmmmsu-cookbook-token-2026
+
+URL: http://localhost:8080/api/foods
+URL: http://localhost:8080/api/foods/1
+URL: http://localhost:8080/api/foods/search/adobo
+URL: http://localhost:8080/api/categories
+URL: http://localhost:8080/api/ingredients
+
+URL: http://localhost:8080/api/foods/999
+
+ADD NEW FOOD
+Method: POST
+URL: http://localhost:8080/api/foods
+
+Headers:
+Authorization: Bearer dmmmsu-cookbook-token-2026
+Content-Type: application/json
+
+Body type: JSON
+
+{
+  "food_name": "Dinengdeng",
+  "category_id": 7,
+  "origin_id": 3,
+  "instructions": "Boil the vegetables in a bagoong-based broth, then simmer until cooked.",
+  "ingredient_ids": [2, 23, 39, 56, 57]
+}
+
+{
+  "food_name": "Ginisang Ampalaya",
+  "category_id": 7,
+  "origin_id": 4,
+  "instructions": "Saute garlic, onion, and tomato. Add bitter melon and cook for a few minutes. Pour in the beaten egg and stir until cooked.",
+  "ingredient_ids": [7, 22, 26, 40, 61, 18]
+}
+
+{
+  "food_name": "Tortang Talong",
+  "category_id": 4,
+  "origin_id": 4,
+  "instructions": "Grill the eggplant until soft and remove the skin. Flatten it, dip it in beaten egg, and fry until golden brown.",
+  "ingredient_ids": [23, 22, 40, 18, 51]
+}
+
+{
+  "food_name": "Ginataang Kalabasa",
+  "category_id": 7,
+  "origin_id": 4,
+  "instructions": "Saute garlic and onion. Add squash, string beans, shrimp, and coconut milk. Simmer until the vegetables are tender.",
+  "ingredient_ids": [56, 57, 52, 17, 26, 40]
+}
